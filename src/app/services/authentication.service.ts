@@ -1,3 +1,4 @@
+// Kristofer McCormick 1803203
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase/app';
 

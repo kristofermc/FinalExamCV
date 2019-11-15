@@ -1,0 +1,23 @@
+:host {
+    ion-content {
+        --background: rgb(0,0,0);
+        --background: linear-gradient(110deg, rgba(0,0,0,1) 21%, rgba(9,11,56,1) 37%, rgba(17,53,82,1) 99.5%, rgba(76,106,255,1) 100%);
+    }
+    ion-list {
+        &.list-md {
+            padding: 0;
+        }
+    }
+    .bottom {
+        position: fixed;
+        text-align: center;
+        bottom: 0px;
+
+    }
+    .mid {
+        position: fixed;
+        left: 0;
+        bottom: 40%;
+        right: 0;
+    }
+}

@@ -1,3 +1,32 @@
+<!--Kristofer McCormick 1803203-->
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+    <div class="theme-bg"></div>
+    <ion-split-pane>
+      <ion-menu color="dark">
+        <ion-header>
+          <ion-toolbar color="dark">
+            <!-- Log out button again-->
+              <ion-buttons slot="start">
+                  <ion-button (click)="logout()">
+                    <ion-icon slot="icon-only" name="ios-power"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+            <ion-title>Menu</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content padding>
+          <!-- class added to center the items in the list-->
+          <ion-list class="mid">
+            <ion-menu-toggle *ngFor="let p of appPage">
+              <ion-item [routerLink]="p.url" [routerDirection]="'root'">
+                <ion-icon slot="start" [name]="p.icon"></ion-icon>
+                  <ion-label>{{p.title}}</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>        
+          </ion-content>
+          </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+    </ion-split-pane>
+  </ion-app>
+  

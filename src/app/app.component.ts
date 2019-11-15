@@ -1,8 +1,10 @@
+// Kristofer McCormick 1803203
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AuthenticateService } from './services/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +12,38 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+
+  public appPage = [
+    {
+      title: 'About',
+      url: '/tabs/tab1',
+      icon: 'ios-contact'
+    },
+    {
+      title: 'Portfolio',
+      url: '/tabs/tab2',
+      icon: 'ios-apps'
+    },
+    {
+      title: 'CV',
+      url: '/tabs/tab3',
+      icon: 'ios-finger-print'
+    },
+    {
+      title: 'Contact',
+      url: '/tabs/tab4',
+      icon: 'ios-chatbubbles'
+    }
+  ];
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    public navCtrl: NavController,
+    private authService: AuthenticateService,
   ) {
+
     this.initializeApp();
   }
 
@@ -22,6 +51,14 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+    });
+  }
+
+  logout() {
+    this.authService.logoutUser()
+    .then(res => {
+      console.log(res);
+      this.navCtrl.navigateBack('');
     });
   }
 }

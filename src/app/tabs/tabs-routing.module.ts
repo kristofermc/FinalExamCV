@@ -1,3 +1,4 @@
+// Kristofer McCormick 1803203
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
@@ -37,6 +38,16 @@ const routes: Routes = [
           }
         ]
       },
+      {
+      path: 'tab4',
+      children: [
+        {
+          path: '',
+          loadChildren: () =>
+            import('../tab4/tab4.module').then(m => m.Tab4PageModule)
+        }
+      ]
+    },
       {
         path: '',
         redirectTo: '/tabs/tab1',
