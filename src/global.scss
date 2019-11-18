@@ -80,6 +80,10 @@ ion-toolbar {
   .fw700 {
       font-weight: 700 !important;
   }
+
+  .fw900 {
+    font-weight: 700 !important;
+}
   
   .text08 {
     font-size: .8rem;
@@ -159,6 +163,7 @@ ion-toolbar {
         ion-item {
           background: none;
           padding: 0;
+          
   
           &:first-child {
             border-top: none;
