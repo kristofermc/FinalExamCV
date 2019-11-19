@@ -17,38 +17,58 @@
     <div class="theme-bg"></div>
     <div class="auth-content">
 
+<ion-button size="small" expand="block" shape="round" color="dark">
+  Email
+</ion-button>
+<br>
+  kris@infinityhorizon.co.uk
+<br>
+<br>
+<ion-button size="small" expand="block" shape="round" color="dark">
+  Phone
+</ion-button>
+<br>
++358456101645
+<br><br>
 
-  
+<ion-button size="small" expand="block" shape="round" color="dark">
+    LinkedIn
+  </ion-button>
+<br>
+<ion-col size="6" offset="5">
+    <ion-button size="small" color="secondary" href="https://www.linkedin.com/in/kristofer-mccormick/">
+      <ion-icon name="logo-linkedin"></ion-icon></ion-button>
+    </ion-col>
+    <br><br>
 
-              <ion-button size="small" expand="block" shape="round" color="dark">
-                Email
-              </ion-button>
-              <br>
+<ion-button size="small" expand="block" shape="round" color="dark">
+Contact form
+</ion-button>
+<br>
+
+<ion-item no-padding class="animated fadeInUp" color="dark">
+  <ion-label position="stacked">Name:</ion-label>
+  <ion-textarea auto-grow="true"[(ngModel)]="message.name"></ion-textarea>
+</ion-item>
 
 
-                kris@infinityhorizon.co.uk
+<ion-item no-padding class="animated fadeInUp" color="dark">
+  <ion-label position="stacked">Contact detail:<br><div class="text05"><i>(If response required)</i></div></ion-label>
+  <ion-textarea auto-grow="true" [(ngModel)]="message.contact"></ion-textarea>
+</ion-item>
 
-              <br>
-              <br>
+<ion-item no-padding class="animated fadeInUp" color="dark">
+  <ion-label position="stacked">Message:</ion-label>
+  <ion-textarea auto-grow="true" [(ngModel)]="message.message" rows="8"></ion-textarea>
+</ion-item>
 
-                  <ion-button size="small" expand="block" shape="round" color="dark">
-                    Phone
-                  </ion-button>
-                  <br>
+<br>
 
+<ion-col size="6" offset="3">
+<ion-button size="small"  shape="round" color="secondary" (click)="addMessage()">
+  <ion-icon name="send" slot="start"></ion-icon>
+  Send message
+</ion-button>
+</ion-col>
+<br>
 
-                    +358456101645
-
-                  <br>
-     
-                  <ion-button size="small" expand="block" shape="round" color="dark">
-                      Contact form
-                    </ion-button>
-                    <br>
-  
-  
-
-  
-                    <br>
-
-  

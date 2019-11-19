@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, ModalController } from '@ionic/angular';
 import { AuthenticateService } from '../services/authentication.service';
+import { CvPage } from 'src/app/cv/cv.page';
 
 @Component({
   selector: 'app-tab3',
@@ -14,7 +15,7 @@ export class Tab3Page {
 
   constructor(
     private navCtrl: NavController,
-    private authService: AuthenticateService
+    private authService: AuthenticateService,
   ) {}
 
   ngOnInit() {
@@ -36,4 +37,5 @@ export class Tab3Page {
       console.log(error);
     });
   }
+
 }

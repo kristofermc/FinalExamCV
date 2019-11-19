@@ -25,9 +25,9 @@ export class AppComponent {
       icon: 'ios-apps'
     },
     {
-      title: 'CV',
+      title: 'Skills',
       url: '/tabs/tab3',
-      icon: 'ios-finger-print'
+      icon: 'ios-finger-print',
     },
     {
       title: 'Contact',
