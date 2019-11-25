@@ -7,8 +7,17 @@
     }
 }
 // text center
+.txtcenter {
+    text-align: center;
+}
+
 .center {
     text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+      
 }
 .img {
     width: 100%;

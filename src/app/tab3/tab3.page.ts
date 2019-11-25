@@ -19,14 +19,14 @@ export class Tab3Page {
   ) {}
 
   ngOnInit() {
-
+// auth guard forr log in
     if (this.authService.userDetails()) {
       this.userEmail = this.authService.userDetails().email;
     } else {
       this.navCtrl.navigateBack('');
     }
   }
-
+// log out service
   logout() {
     this.authService.logoutUser()
     .then(res => {

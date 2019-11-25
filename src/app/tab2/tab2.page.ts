@@ -20,14 +20,14 @@ export class Tab2Page {
   ) {}
 
   ngOnInit() {
-
+// auth service for logged in user
     if (this.authService.userDetails()) {
       this.userEmail = this.authService.userDetails().email;
     } else {
       this.navCtrl.navigateBack('');
     }
   }
-
+// log out button function
   logout() {
     this.authService.logoutUser()
     .then(res => {

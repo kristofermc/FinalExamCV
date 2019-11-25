@@ -12,7 +12,7 @@ import { AuthenticateService } from './services/authentication.service';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
-
+// Where the side menu gets info from
   public appPage = [
     {
       title: 'About',
@@ -53,7 +53,7 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
-
+// log out button
   logout() {
     this.authService.logoutUser()
     .then(res => {

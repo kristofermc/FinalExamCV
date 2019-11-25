@@ -7,9 +7,19 @@
     }
 }
 // text center
-.center {
+.txtcenter {
     text-align: center;
 }
+// image centering
+.center {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+      
+}
+// used on google map
 .img {
     width: 100%;
     background-size: 100% 100%;

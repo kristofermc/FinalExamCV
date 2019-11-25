@@ -32,14 +32,14 @@ export class Tab4Page {
   ) {}
 
   ngOnInit() {
-
+// auth service for page
     if (this.authService.userDetails()) {
       this.userEmail = this.authService.userDetails().email;
     } else {
       this.navCtrl.navigateBack('');
     }
   }
-
+// log out button
   logout() {
     this.authService.logoutUser()
     .then(res => {
@@ -50,6 +50,7 @@ export class Tab4Page {
       console.log(error);
     });
   }
+// code for message form to go to firebase
   ionViewWillEnter() {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
     if (id) {
@@ -69,6 +70,7 @@ export class Tab4Page {
       });
       await alert.present();
     }, async err => {
+// alert pop up code
       const alert = await this.alertCtrl.create({
         header: 'Message failed',
         message: 'Your Message was unable to send, please try again.',

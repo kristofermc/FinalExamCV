@@ -7,9 +7,19 @@
     }
 }
 // text center
-.center {
+.txtcenter {
     text-align: center;
 }
+// centering of images or buttons
+.center {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+      
+}
+// centering purely for images
 .img {
     width: 100%;
     background-size: 100% 100%;

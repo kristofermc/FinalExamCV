@@ -1,3 +1,4 @@
+// Kristofer McCormick 1803203
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';

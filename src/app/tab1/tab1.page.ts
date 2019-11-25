@@ -1,3 +1,4 @@
+// Kristofer McCormick 1803203
 import { Component, OnInit } from '@angular/core';
 import { NavController, ModalController } from '@ionic/angular';
 import { AuthenticateService } from '../services/authentication.service';
@@ -17,14 +18,14 @@ export class Tab1Page implements OnInit {
   ) {}
 
   ngOnInit() {
-
+// Log in auth service
     if (this.authService.userDetails()) {
       this.userEmail = this.authService.userDetails().email;
     } else {
       this.navCtrl.navigateBack('');
     }
   }
-
+// log out service
   logout() {
     this.authService.logoutUser()
     .then(res => {

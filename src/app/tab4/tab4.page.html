@@ -10,13 +10,13 @@
     <ion-icon slot="icon-only" name="ios-power"></ion-icon>
   </ion-button>
 </ion-buttons>
-
-<ion-title class="center">Contact</ion-title>
+<!-- title for the top of page -->
+<ion-title class="txtcenter">Contact</ion-title>
   </ion-toolbar>
 <ion-content padding class="animated fadeIn login auth-page">
     <div class="theme-bg"></div>
     <div class="auth-content">
-
+<!-- Contact area -->
 <ion-button size="small" expand="block" shape="round" color="dark">
   Email
 </ion-button>
@@ -30,7 +30,14 @@
 <br>
 +358456101645
 <br><br>
-
+<!-- Google map -->
+<ion-button size="small" expand="block" shape="round" color="dark">
+  Location
+</ion-button>
+<br>
+<div class="img"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=matinkyl%C3%A4&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com"></a></div></div>
+<br><br>
+<!-- Linked in button with link -->
 <ion-button size="small" expand="block" shape="round" color="dark">
     LinkedIn
   </ion-button>
@@ -40,12 +47,12 @@
       <ion-icon name="logo-linkedin"></ion-icon></ion-button>
     </ion-col>
     <br><br>
-
+<!-- Contact form with thank you pop up window. content goes to firebase database -->
 <ion-button size="small" expand="block" shape="round" color="dark">
 Contact form
 </ion-button>
 <br>
-
+<!-- Auto grow enabled  in all boxes so the boxes re-adjust when fuller -->
 <ion-item no-padding class="animated fadeInUp" color="dark">
   <ion-label position="stacked">Name:</ion-label>
   <ion-textarea auto-grow="true"[(ngModel)]="message.name"></ion-textarea>
@@ -56,14 +63,14 @@ Contact form
   <ion-label position="stacked">Contact detail:<br><div class="text05"><i>(If response required)</i></div></ion-label>
   <ion-textarea auto-grow="true" [(ngModel)]="message.contact"></ion-textarea>
 </ion-item>
-
+<!-- Auto grow enabled and by default bigger box of 8 rows for a longer message-->
 <ion-item no-padding class="animated fadeInUp" color="dark">
   <ion-label position="stacked">Message:</ion-label>
   <ion-textarea auto-grow="true" [(ngModel)]="message.message" rows="8"></ion-textarea>
 </ion-item>
 
 <br>
-
+<!-- Send message button -->
 <ion-col size="6" offset="3">
 <ion-button size="small"  shape="round" color="secondary" (click)="addMessage()">
   <ion-icon name="send" slot="start"></ion-icon>
